@@ -1,0 +1,10 @@
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\bin\Debug\Jodo da velha.exe.config
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\bin\Debug\Jodo da velha.exe
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\bin\Debug\Jodo da velha.pdb
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\obj\Debug\Jodo da velha.csproj.AssemblyReference.cache
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\obj\Debug\Jodo_da_velha.Form1.resources
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\obj\Debug\Jodo_da_velha.Properties.Resources.resources
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\obj\Debug\Jodo da velha.csproj.GenerateResource.cache
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\obj\Debug\Jodo da velha.csproj.CoreCompileInputs.cache
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\obj\Debug\Jodo da velha.exe
+C:\Users\rafael.tsantos6\source\repos\Jodo da velha\Jodo da velha\obj\Debug\Jodo da velha.pdb
