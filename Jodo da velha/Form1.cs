@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,9 +43,9 @@ namespace Jodo_da_velha
             }
             else
             {
-                jogadaAtual = "X"; 
+                jogadaAtual = "X";
                 // trocar a cor do label: 
-                lblInfo.ForeColor = Color.Red;
+                lblInfo.ForeColor = Color.Blue;
             }
 
             // Atualizar p label: 
@@ -57,7 +59,7 @@ namespace Jodo_da_velha
         {
             jogadaAtual = "x";
             lblInfo.Text = $"É a vez do {jogadaAtual}";
-            lblInfo.ForeColor = Color.Red ;
+            lblInfo.ForeColor = Color.Red;
 
             //Resetar os botões :
             btn11.Enabled = true;
@@ -70,7 +72,7 @@ namespace Jodo_da_velha
             btn13.Text = "";
 
             btn21.Enabled = true;
-            btn22.Text  = "";
+            btn22.Text = "";
 
             btn22.Enabled = true;
             btn22.Text = "";
@@ -91,6 +93,7 @@ namespace Jodo_da_velha
 
 
         }
+
         public void VerificarVencedor()
         {
             // Verificar linhas:
@@ -100,7 +103,11 @@ namespace Jodo_da_velha
                  * zzz
                  * zzz
                  */
+
+
                 lblInfo.Text = $"O vencedor é {btn11.Text}";
+                DesabilitarTudo();
+
             }
             else if (btn21.Text == btn22.Text && btn22.Text == btn23.Text && btn21.Text != "")
             {
@@ -108,7 +115,9 @@ namespace Jodo_da_velha
                  * ---
                  * zzz
                  */
+
                 lblInfo.Text = $"O vencedor é {btn21.Text}";
+                DesabilitarTudo();
             }
             else if (btn31.Text == btn32.Text && btn32.Text == btn33.Text && btn31.Text != "")
             {
@@ -116,7 +125,9 @@ namespace Jodo_da_velha
                  * zzz
                  * ---
                  */
+
                 lblInfo.Text = $"O vencedor é {btn31.Text}";
+                DesabilitarTudo();
             }
             else if (btn11.Text == btn21.Text && btn21.Text == btn31.Text && btn11.Text != "")
             {
@@ -124,7 +135,9 @@ namespace Jodo_da_velha
                  * -zz
                  * -zz
                  */
+
                 lblInfo.Text = $"O vencedor é {btn11.Text}";
+                DesabilitarTudo();
             }
             else if (btn12.Text == btn22.Text && btn22.Text == btn32.Text && btn12.Text != "")
             {
@@ -132,7 +145,9 @@ namespace Jodo_da_velha
                  * z-z
                  * z-z
                  */
+
                 lblInfo.Text = $"O vencedor é {btn12.Text}";
+                DesabilitarTudo();
             }
             else if (btn13.Text == btn23.Text && btn23.Text == btn33.Text && btn13.Text != "")
             {
@@ -140,7 +155,9 @@ namespace Jodo_da_velha
                  * zz-
                  * zz-
                  */
+
                 lblInfo.Text = $"O vencedor é {btn13.Text}";
+                DesabilitarTudo();
             }
             else if (btn11.Text == btn22.Text && btn22.Text == btn33.Text && btn11.Text != "")
             {
@@ -149,6 +166,7 @@ namespace Jodo_da_velha
                  * zz-
                  */
                 lblInfo.Text = $"O vencedor é {btn11.Text}";
+                DesabilitarTudo();
             }
             else if (btn13.Text == btn22.Text && btn22.Text == btn31.Text && btn13.Text != "")
             {
@@ -156,16 +174,38 @@ namespace Jodo_da_velha
                  * z-z
                  * -zz
                  */
-                lblInfo.Text =s
+
+                lblInfo.Text = $"O vencedor é {btn13.Text}";
+                DesabilitarTudo();
+            }//Vereficar se deu "Velha"
+            else if (!btn11.Enabled && !btn12.Enabled && !btn13.Enabled && !btn21.Enabled
+                && !btn22.Enabled && !btn23.Enabled && btn31.Enabled && !btn32.Enabled && !btn33.Enabled)
+            {
+                lblInfo.Text = $"EMPATE"; 
+                DesabilitarTudo();
+            }
+                
+
+            
+
+            
+
+            
         }
-
-
-
-
-
-
+        public void DesabilitarTudo()
+        {
+            btn11.Enabled = false;
+            btn12.Enabled = false;
+            btn13.Enabled = false; 
+            btn21.Enabled = false;
+            btn22.Enabled = false;
+            btn23.Enabled = false;
+            btn31.Enabled = false;
+            btn32.Enabled = false; 
+            btn33.Enabled = false;
+        }
     }
+}
 
-        }
-    
+
 
